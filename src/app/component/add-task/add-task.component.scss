@@ -1,0 +1,15 @@
+
+.container{
+    display: table;
+    width: 100%;
+
+    &__form{
+        display: flex;
+        gap: 15px;
+        height: 75px;
+    }
+}
+.btn-add {
+    display: table-cell;
+    max-width: 600px;
+}

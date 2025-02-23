@@ -1,18 +1,36 @@
-<div>
-    <h2>Add Task</h2>
-    <form (ngSubmit)="addTask()">
+<div class="container">
+  <form (ngSubmit)="addTask()" class="container__form">
+    <mat-form-field >
+      <mat-label>Titulo</mat-label>
       <input
+        matInput
+        style="color: #e0f7fa"
         type="text"
-        [(ngModel)]="title"
         name="title"
-        placeholder="Title"
-        required
-      />
-      <textarea
-        [(ngModel)]="description"
+        [(ngModel)]="title"
+        placeholder=""
+      >
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Descripción</mat-label>
+      <textarea 
+        matInput
         name="description"
-        placeholder="Description"
+        [(ngModel)]="description"
+        placeholder=""
       ></textarea>
-      <button type="submit">Add Task</button>
-    </form>
-  </div>
+    </mat-form-field>
+    <section>
+      <section>
+        <div class="btn-add">
+          <button 
+            mat-raised-button
+            type="submit"  
+          >
+            Add Task
+          </button>
+        </div>
+      </section>
+    </section>
+  </form>
+</div>

@@ -47,6 +47,14 @@ export class TaskService {
     }
   }
 
+  unMarkTask(taskId: number): void {
+    const task = this.tasks.find((t) => t.id === taskId);
+    if (task) {
+      task.completed = false;
+      this.saveTasks();
+    }
+  }
+
   filterTasks(status: 'all' | 'completed' | 'pending'): Task[] {
     if (status === 'completed') {
       return this.tasks.filter((task) => task.completed);
