@@ -1,0 +1,27 @@
+.search{
+    display: flex;
+    &__form{
+        display: flex;
+        gap: 15px;
+        height: 75px;
+    }
+}
+
+.list{
+    display: grid;
+    grid-gap: 10px;
+
+    &__container{
+
+        display: flex;
+        align-items: center;
+        align-self: center;
+        gap: 20px;
+        background-color: rgba(3, 55, 71, 0.5);
+        border-radius: 40px;
+
+        &__btn{
+            margin-left: 30px;
+        }
+    }
+}

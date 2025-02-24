@@ -1,0 +1,46 @@
+<div>
+    <h2>Task List</h2>
+    <div class="search">
+        <form class="search__form">
+            <mat-form-field>
+                <mat-label>Filter</mat-label>
+                <mat-select 
+                    [(ngModel)]="filterStatusForm" 
+                    name="status"
+                    (selectionChange)="onFilterChange($event.value)"
+                >
+                    @for (opt of options; track opt) {
+                    <mat-option [value]="opt">{{opt}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field >
+                <mat-label>Titulo</mat-label>
+                <input
+                    matInput
+                    type="text"
+                    name="searchQuery"
+                    [(ngModel)]="searchQuery"
+                    placeholder=""
+                    (input)="searchTasks()"
+                >
+            </mat-form-field>
+        </form>
+    </div>
+
+    <div class="list">
+        <div class="list__container" *ngFor="let task of tasks">
+            <div class="list__container__btn">
+                <mat-slide-toggle
+                    [checked]="task.completed"
+                    (change)="onToggleChange($event, task.id)"
+                ></mat-slide-toggle>
+            </div>
+            <div class="list__container__task">
+                <h3>{{ task.title }}</h3>
+                <p>{{ task.description }}</p>
+                <p>Status: {{ task.completed ? 'Completed' : 'Pending' }}</p>
+            </div>
+        </div>
+    </div>
+</div>
