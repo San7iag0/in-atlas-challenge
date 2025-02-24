@@ -36,10 +36,6 @@ export class AddTaskComponent {
     private taskService: TaskService
   ) {}
 
-  updateErrorMessage(): void {
-    this.errorMessage.set('You must enter a value');
-  }
-
   addTask(): void {
     if (this.title.trim()) {
       this.taskService.addTask(this.title, this.description);
