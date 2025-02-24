@@ -55,6 +55,13 @@ export class TaskService {
     }
   }
 
+  deleteTask(taskId: number): Task[] {
+    const filterObj = this.tasks.filter((task) => task.id !== taskId);
+    this.tasks = filterObj;
+    this.saveTasks();
+    return this.tasks;
+  }
+
   filterTasks(status: 'all' | 'completed' | 'pending'): Task[] {
     if (status === 'completed') {
       return this.tasks.filter((task) => task.completed);

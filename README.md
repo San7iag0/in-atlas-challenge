@@ -1,59 +1,54 @@
-# InAtlasChallenge
+📌 inAtlas: Frontend Dev Challenge
+🚀 Project Overview
+This is a To Do and Task Management Application built using Angular 19. It allows users to add, filter, and manage tasks, ensuring data persistence with LocalStorage.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.8.
+📂 Project Features
+✅ Task List
+*   Displays a list of tasks with their status (Pending / Completed / all).
+*   Each task includes a title and description.
 
-## Development server
+✅ Add Task
+*   A form to create new tasks.
+*   Validation: Title is required.
 
-To start a local development server, run:
+✅ Mark Task as Completed
+*   A button to mark tasks as completed.
 
-```bash
+✅ Filter Tasks
+*   A dropdown to filter tasks by status (All, Completed, Pending).
+*   A search bar to find tasks by title or description.
+
+✅ Data Persistence
+*   Tasks are stored in LocalStorage, so they remain even after reloading the page.
+
+✅ Styling
+Angular Material is used for a modern and clean UI.
+
+🛠️ Tech Stack
+1. Angular 19 – Core framework
+2. Angular Material – UI components
+3. LocalStorage – Persistent storage
+4. TypeScript – Strongly typed JavaScript
+
+📦 Installation & Setup
+
+1️⃣ Clone the repository
+1.  git clone https://github.com/San7iag0/in-atlas-challenge.git
+2.  cd in-atlas-challenge
+
+2️⃣ Install dependencies
+*   npm install
+
+3️⃣ Run the application
 ng serve
-```
+Then, open http://localhost:4200 in your browser.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+🚀 Future Improvements
+✅ Drag-and-drop support for task reordering
+✅ Due date and priority for tasks
+✅ Dark mode support
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+👨‍💻 Author
+Santiago Bejarano Pachon
+https://github.com/San7iag0
+Feel free to connect with me! 🚀

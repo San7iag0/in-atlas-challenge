@@ -39,7 +39,9 @@
             <div class="list__container__task">
                 <h3>{{ task.title }}</h3>
                 <p>{{ task.description }}</p>
-                <p>Status: {{ task.completed ? 'Completed' : 'Pending' }}</p>
+            </div>
+            <div class="list__container__icon">
+                <mat-icon (click)="deleteTask(task.id)">delete</mat-icon>
             </div>
         </div>
     </div>

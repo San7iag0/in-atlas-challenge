@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { TaskService } from '../../services/task.service';
-import { FormsModule } from '@angular/forms';
+import { FormControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import {MatSelectModule} from '@angular/material/select';
