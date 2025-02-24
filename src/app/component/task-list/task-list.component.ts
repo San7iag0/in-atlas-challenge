@@ -8,6 +8,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-task-list',
@@ -17,7 +18,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatSlideToggleModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatIconModule
   ],
   templateUrl: './task-list.component.html',
   styleUrl: './task-list.component.scss',
@@ -43,7 +45,6 @@ export class TaskListComponent {
   }
 
   onToggleChange(event: any, taskId: number) {
-    console.log('event ', event);
     if (event.checked) {
       this.taskService.markTaskAsCompleted(taskId);
       this.filterTasks();
@@ -61,14 +62,16 @@ export class TaskListComponent {
     this.tasks = this.taskService.filterTasks(this.filterStatusForm);
   }
 
-  // Search tasks by title or description
   searchTasks(): void {
     this.tasks = this.taskService.searchTasks(this.searchQuery);
   }
 
-  // Mark a task as completed
   markAsCompleted(taskId: number): void {
     this.taskService.markTaskAsCompleted(taskId);
-    this.filterTasks(); // Refresh the list
+    this.filterTasks();
+  }
+
+  deleteTask(taskId: number): void {
+    this.tasks = this.taskService.deleteTask(taskId);
   }
 }
