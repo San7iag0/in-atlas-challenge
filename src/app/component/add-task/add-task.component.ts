@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { TaskService } from '../../services/task.service';
-import { FormsModule } from '@angular/forms';
+import { FormControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import {MatSelectModule} from '@angular/material/select';
@@ -35,10 +35,6 @@ export class AddTaskComponent {
   constructor(
     private taskService: TaskService
   ) {}
-
-  updateErrorMessage(): void {
-    this.errorMessage.set('You must enter a value');
-  }
 
   addTask(): void {
     if (this.title.trim()) {
