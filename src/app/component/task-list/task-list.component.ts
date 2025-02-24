@@ -27,7 +27,7 @@ export class TaskListComponent {
 
   tasks: Task[] = [];
   searchQuery: string = '';
-  checked: boolean = false;
+  checked!: boolean;
   filterStatus: 'all' | 'completed' | 'pending' = 'all';
   filterStatusForm: 'all' | 'completed' | 'pending' = 'all';
   options: string[] = ['all', 'completed', 'pending'];
@@ -54,12 +54,10 @@ export class TaskListComponent {
   }
 
   filterTasks(): void {
-    console.log(this.filterStatus);
-    this.tasks = this.taskService.filterTasks(this.filterStatus);
+    this.tasks = this.taskService.filterTasks(this.filterStatusForm);
   }
 
   onFilterChange(e: string): void {
-    console.log('filterStatusForm ', e);
     this.tasks = this.taskService.filterTasks(this.filterStatusForm);
   }
 

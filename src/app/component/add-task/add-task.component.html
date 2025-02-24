@@ -4,23 +4,20 @@
       <mat-label>Titulo</mat-label>
       <input
         matInput
-        style="color: #e0f7fa"
         type="text"
         name="title"
         [(ngModel)]="title"
-        placeholder=""
       >
     </mat-form-field>
     <mat-form-field>
       <mat-label>Descripción</mat-label>
-      <textarea 
+      <input 
         matInput
         name="description"
         [(ngModel)]="description"
-        placeholder=""
-      ></textarea>
+      >
     </mat-form-field>
-    <section>
+    <div class="container__form__btn">
       <section>
         <div class="btn-add">
           <button 
@@ -31,6 +28,6 @@
           </button>
         </div>
       </section>
-    </section>
+    </div>
   </form>
 </div>

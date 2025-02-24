@@ -32,7 +32,7 @@
         <div class="list__container" *ngFor="let task of tasks">
             <div class="list__container__btn">
                 <mat-slide-toggle
-                    [checked]="checked"
+                    [checked]="task.completed"
                     (change)="onToggleChange($event, task.id)"
                 ></mat-slide-toggle>
             </div>
